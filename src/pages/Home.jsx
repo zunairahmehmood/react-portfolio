@@ -1,3 +1,4 @@
+import image from "../../public/profile.png";
 function Home() {
 
   return (
@@ -13,7 +14,7 @@ function Home() {
         hover:shadow-[0_0_30px_#00f5ff80] 
         transition-shadow duration-500 
         object-cover"
-        src="public\profile.png"
+        src={image}
         alt=""
       />
 
