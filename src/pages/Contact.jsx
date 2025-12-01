@@ -4,7 +4,7 @@ import { db, collection, addDoc, Timestamp } from "../firebase/firebaseConfig.js
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false); // ✅ Loading state
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,7 +12,7 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);  // start loading
+    setLoading(true);
     try {
       await addDoc(collection(db, "messages"), {
         name: form.name,
@@ -26,7 +26,7 @@ function Contact() {
       console.error("Error sending message:", err);
       setSuccess("Failed to send message. Try again.");
     } finally {
-      setLoading(false); // stop loading
+      setLoading(false);
     }
   };
 
@@ -70,10 +70,10 @@ function Contact() {
           />
           <button
             type="submit"
-            disabled={loading} // ✅ disable button during loading
+            disabled={loading}
             className="px-6 py-3 mt-2 bg-cyan text-navy font-bold rounded hover:shadow-[0_0_20px_#00f5ff80] transition disabled:opacity-50"
           >
-            {loading ? "Loading..." : "Send Message"} {/* ✅ show Loading */}
+            {loading ? "Loading..." : "Send Message"}
           </button>
         </form>
       </div>

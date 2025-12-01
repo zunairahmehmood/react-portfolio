@@ -1,5 +1,4 @@
 import image from "../../public/profile.png";
-import projects from "./Projects.jsx";
 import { Link } from "react-router-dom";
 
 function Home() {
