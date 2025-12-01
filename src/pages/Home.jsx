@@ -1,5 +1,7 @@
 import image from "../../public/profile.png";
 import projects from "./Projects.jsx";
+import { Link } from "react-router-dom";
+
 function Home() {
 
   return (
@@ -28,13 +30,14 @@ function Home() {
         using <span className="text-cyan">React</span> & <span className="text-cyan">Tailwind CSS</span>.
       </p>
 
-      <a
-        href={projects}
+      <Link
+        to="/projects"
         className="mt-8 px-8 py-3 text-lg border border-cyan rounded-lg text-cyan 
         hover:bg-cyan hover:text-navy transition shadow-[0_0_20px_#00f5ff80]"
       >
         View My Work
-      </a>
+      </Link>
+
     </section>
   );
 }
