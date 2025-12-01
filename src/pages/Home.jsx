@@ -1,4 +1,5 @@
 import image from "../../public/profile.png";
+import projects from "./Projects.jsx";
 function Home() {
 
   return (
@@ -28,7 +29,7 @@ function Home() {
       </p>
 
       <a
-        href="/projects"
+        href={projects}
         className="mt-8 px-8 py-3 text-lg border border-cyan rounded-lg text-cyan 
         hover:bg-cyan hover:text-navy transition shadow-[0_0_20px_#00f5ff80]"
       >
